@@ -1,0 +1,22 @@
+---
+title: "report"
+---
+
+```{r}
+library(tidyverse)
+library(lubridate)
+load("data/clean/clean.RData")
+
+eq_counts <- clean |>
+  mutate(date = as.Date(ymd_hms(time))) |>
+  count(date)
+
+ggplot(eq_counts, aes(x = date, y = n)) +
+  geom_col(fill = "#2C7FB8") +
+  labs(
+    title = "Earthquakes per Day",
+    x = "Date",
+    y = "Count"
+  ) +
+  theme_minimal()
+```
