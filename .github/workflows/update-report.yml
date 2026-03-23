@@ -26,7 +26,7 @@ jobs:
           packages: tidyverse, lubridate, knitr, quarto, maps
 
       - name: Run pipeline
-        run: Rscript run-all.R
+        run: Rscript scripts/run-all.R
 
       - name: Create gh-pages branch if needed
         run: |
