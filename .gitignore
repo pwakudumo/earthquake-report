@@ -5,3 +5,6 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# macOS
+.DS_Store
